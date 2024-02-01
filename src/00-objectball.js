@@ -132,11 +132,23 @@ function numPointsScored(name) {
 
     if (game.home.players[name]) {
         return game.home.players[name].points;
-    }
-    else if (game.away.players[name]) {
+    } else if (game.away.players[name]) {
         return game.away.players[name].points;
+    } else {
+        return 'Player not found';
     }
-    else {
+}
+
+// shoeSize
+
+function shoeSize(name) {
+    let game = gameObject();
+
+    if (game.home.players[name]) {
+        return game.home.players[name].shoe;
+    } else if (game.away.players[name]) {
+        return game.away.players[name].shoe;
+    } else {
         return 'Player not found';
     }
 }
