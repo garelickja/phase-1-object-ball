@@ -63,7 +63,7 @@ function gameObject() {
         
         away: {
             teamName: 'Charlotte Hornets',
-            colors: ['Turquoise, Purple'],
+            colors: ['Turquoise', 'Purple'],
             players: {
                 
                     'Jeff Adrien': {
@@ -148,7 +148,18 @@ function shoeSize(name) {
         return game.home.players[name].shoe;
     } else if (game.away.players[name]) {
         return game.away.players[name].shoe;
-    } else {
-        return 'Player not found';
+    } 
+}
+
+
+// teamColors
+
+function teamColors(teamName) {
+    let game = gameObject();
+
+    if (game.home.teamName === teamName) {
+        return game.home.colors;
+    } else if (game.away.teamName === teamName) {
+        return game.away.colors;
     }
 }
