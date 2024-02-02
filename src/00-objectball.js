@@ -12,7 +12,7 @@ function gameObject() {
                     assists: 12,
                     steals: 3,
                     blocks: 1,
-                    slamDunks: 1,
+                    slamDunks: 1
                 },
             
                 'Reggie Evans': {
@@ -23,7 +23,7 @@ function gameObject() {
                     assists: 12,
                     steals: 12,
                     blocks: 12,
-                    slamDunks: 7,
+                    slamDunks: 7
                 },
     
                 'Brook Lopez': {
@@ -34,7 +34,7 @@ function gameObject() {
                     assists: 10,
                     steals: 3,
                     blocks: 1,
-                    slamDunks: 15,
+                    slamDunks: 15
                 },
             
                 'Mason Plumlee': {
@@ -45,7 +45,7 @@ function gameObject() {
                     assists: 6,
                     steals: 3,
                     blocks: 8,
-                    slamDunks: 5,
+                    slamDunks: 5
                 },
             
                 'Jason Terry': {
@@ -56,9 +56,9 @@ function gameObject() {
                     assists: 2,
                     steals: 4,
                     blocks: 11,
-                    slamDunks: 1,
+                    slamDunks: 1
                 },
-            },
+            }
         },
         
         away: {
@@ -74,7 +74,7 @@ function gameObject() {
                         assists: 1,
                         steals: 2,
                         blocks: 7,
-                        slamDunks: 2,
+                        slamDunks: 2
                     },
     
                     'Bismak Biyombo': {
@@ -85,7 +85,7 @@ function gameObject() {
                         assists: 7,
                         steals: 7,
                         blocks: 15,
-                        slamDunks: 10,
+                        slamDunks: 10
                     },
                 
                     'DeSagna Diop': {
@@ -96,7 +96,7 @@ function gameObject() {
                         assists: 12,
                         steals: 4,
                         blocks: 5,
-                        slamDunks: 5,
+                        slamDunks: 5
                     },
                 
                     'Ben Gordon': {
@@ -107,7 +107,7 @@ function gameObject() {
                         assists: 2,
                         steals: 1,
                         blocks: 1,
-                        slamDunks: 0,
+                        slamDunks: 0
                     },
                 
                     'Brendan Haywood': {
@@ -118,10 +118,10 @@ function gameObject() {
                         assists: 12,
                         steals: 22,
                         blocks: 5,
-                        slamDunks: 12,
+                        slamDunks: 12
                     },
-            },
-        },
+            }
+        }
     };
 }
 
@@ -134,9 +134,7 @@ function numPointsScored(name) {
         return game.home.players[name].points;
     } else if (game.away.players[name]) {
         return game.away.players[name].points;
-    } else {
-        return 'Player not found';
-    }
+    } 
 }
 
 // shoeSize
@@ -163,3 +161,12 @@ function teamColors(teamName) {
         return game.away.colors;
     }
 }
+
+// teamNames
+
+function teamNames() {
+    let game = gameObject();
+    return [game.home.teamName, game.away.teamName];
+}
+
+// playerNumbers
