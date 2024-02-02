@@ -170,3 +170,29 @@ function teamNames() {
 }
 
 // playerNumbers
+
+function playerNumbers(teamName) {
+    let game = gameObject();
+    let team = '';
+    if (game.home.teamName === teamName) {
+        team = game.home;
+    } else if (game.away.teamName === teamName) {
+        team = game.away;
+    }
+
+    if (team) {
+        let playerNumbers = Object.values(team.players).map(player => player.number)
+        return playerNumbers;
+    }
+}
+
+// playerStats
+
+function playerStats(playerName) {
+    const game = gameObject();
+
+    for (const team of Object.values(game)) {
+        if (playerName in team.players)
+        return team.players[playerName];
+    }
+}
