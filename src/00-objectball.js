@@ -242,7 +242,7 @@ function winningTeam() {
     let mostPoints = -1;
     let winningTeamName;
     for (const team in game) {
-        const teamPoints = 0;
+        let teamPoints = 0;
         for (const player in game[team].players) {
             teamPoints += game[team].players[player].points;
         }
